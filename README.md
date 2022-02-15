@@ -1,1 +1,1 @@
-# genshinho_impacto_wiki
+Genshinho Impacto Wiki i'ts just a simple android app that is made for people to get a better look in game mechanics, builds, tips and guides for various topics in the Genshin Impact game made by Myhoyo.
