@@ -1,0 +1,1 @@
+# genshinho_impacto_wiki
