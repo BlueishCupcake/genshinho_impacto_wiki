@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import {ScrollView} from 'react-native';
+import {View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 
-import * as Styled from './style';
+import Background from 'components/Background';
 
 const LoadingScreen: React.FC = () => {
   const [time, setTime] = useState(5);
@@ -13,19 +13,14 @@ const LoadingScreen: React.FC = () => {
     if (time > 0) {
       setTime(time - 1);
     } else {
-      navigation.navigate({key: 'CharacterIcon'});
+      navigation.navigate('CharacterIcon');
     }
-    console.log(time);
   }, 1000);
 
   return (
-    <ScrollView>
-      <Styled.LoadingScreenDiv>
-        <Styled.BackgroundImage
-          source={require('../../assets/2.5lauchescreen.jpg')}
-        />
-      </Styled.LoadingScreenDiv>
-    </ScrollView>
+    <View>
+      <Background image={require('assets/2.5lauchescreen.jpg')} />
+    </View>
   );
 };
 

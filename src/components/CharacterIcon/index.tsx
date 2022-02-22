@@ -1,14 +1,8 @@
 import React from 'react';
 
-import {
-  Image,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import Background from '../Background';
+
+import {SafeAreaView, ScrollView, StatusBar} from 'react-native';
 
 import * as Styled from './styles';
 
@@ -17,14 +11,10 @@ const CharacterIcon: React.FC = () => {
     <SafeAreaView>
       <StatusBar barStyle={'dark-content'} />
       <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <View>
-          <Text>Genshinho</Text>
-          <Text>Impacto</Text>
-
-          <Styled.CharacterIconBtn onPress={() => console.log('Noelle <3')}>
-            <Styled.CharacterIcon source={require('../../assets/noelle.png')} />
-          </Styled.CharacterIconBtn>
-        </View>
+        <Background image={require('../../assets/dashboard_aether_bg.jpg')} />
+        <Styled.CharacterIconBtn onPress={() => console.log('Noelle <3')}>
+          <Styled.CharacterIcon source={require('../../assets/noelle.png')} />
+        </Styled.CharacterIconBtn>
       </ScrollView>
     </SafeAreaView>
   );
